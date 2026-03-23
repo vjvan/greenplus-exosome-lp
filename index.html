@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>外泌體肌膚修護體驗 | 加格霖 GreenPlus</title>
+  <meta name="description" content="加格霖外泌體肌膚修護體驗,7天有感全面改善膚質。醫美術後修護第一品牌,成分單純、安全有效。立即預約免費諮詢。">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#faf7f2',
+              100: '#f3ede3',
+              200: '#e6d9c3',
+              300: '#d4be9c',
+              400: '#c2a47a',
+              500: '#b08d5e',
+              600: '#9a7548',
+              700: '#7d5d3b',
+              800: '#5f4730',
+              900: '#3d2e20',
+            },
+            sage: {
+              50: '#f4f7f4',
+              100: '#e4ebe4',
+              200: '#c8d7c8',
+              300: '#9db89d',
+              400: '#6f966f',
+              500: '#4d7a4d',
+              600: '#3d623d',
+            },
+            blush: {
+              50: '#fdf5f2',
+              100: '#f9e8e2',
+              200: '#f5ddd5',
+              300: '#edcec3',
+              400: '#e4b8a9',
+            },
+            cream: '#fdfbf7',
+            gold: '#c9a96e',
+          },
+          fontFamily: {
+            sans: ['Noto Sans TC', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+            logo: ['Cormorant Garamond', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-gradient {
+      background: linear-gradient(135deg, #fdfbf7 0%, #f3ede3 40%, #e6d9c3 100%);
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #c9a96e, #b08d5e);
+    }
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #c9a96e, #9a7548);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .pulse-btn {
+      animation: pulse-gold 2s infinite;
+    }
+    @keyframes pulse-gold {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201, 169, 110, 0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(201, 169, 110, 0); }
+    }
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .line-decoration::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, #c9a96e, transparent);
+      margin-top: 16px;
+    }
+    .line-decoration-center::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+      margin: 16px auto 0;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #c9a96e;
+      box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+    }
+    .ingredient-icon {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f3ede3, #e6d9c3);
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body class="font-sans text-brand-800 bg-cream">
+
+  <!-- Top Bar -->
+  <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-brand-100">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5">
+        <span class="font-logo text-2xl font-semibold text-gold tracking-wider" style="letter-spacing: 0.15em;">G<span class="text-lg">P</span></span>
+        <span class="font-logo text-lg font-medium text-gold tracking-[0.25em] hidden sm:inline">GREEN PLUS</span>
+        <span class="font-logo text-lg font-medium text-gold tracking-[0.25em] sm:hidden">GP</span>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="https://lin.ee/5Pk0PR4" target="_blank" rel="noopener"
+           class="hidden sm:flex items-center gap-1.5 text-sm text-brand-500 hover:text-gold transition-colors">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          加入好友
+        </a>
+        <a href="#booking"
+           class="gold-gradient text-white px-5 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
+          立即預約體驗
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-gradient pt-28 pb-20 md:pt-36 md:pb-28 relative overflow-hidden">
+    <div class="absolute top-20 right-0 w-72 h-72 bg-brand-200/30 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-10 w-48 h-48 bg-sage-200/20 rounded-full blur-2xl"></div>
+    <div class="max-w-6xl mx-auto px-4 relative">
+      <div class="max-w-2xl">
+        <p class="text-brand-500 tracking-[0.3em] text-sm mb-4 uppercase">Exosome Skin Repair Experience</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+          外泌體<br>
+          <span class="text-gold-gradient">肌膚修護體驗</span>
+        </h1>
+        <p class="text-lg md:text-xl text-brand-600 leading-relaxed mb-4">
+          細胞級修護科技,喚醒肌膚自癒力
+        </p>
+        <p class="text-brand-400 leading-relaxed mb-10 max-w-lg">
+          加格霖十年專研醫美術後修護,結合頂尖外泌體科技,
+          成分單純、安全有效,7天有感全面改善膚質。
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#booking"
+             class="gold-gradient text-white px-8 py-4 rounded-full text-center font-bold text-lg hover:opacity-90 transition-opacity pulse-btn">
+            免費預約諮詢
+          </a>
+          <a href="#exosome"
+             class="border-2 border-brand-300 text-brand-600 px-8 py-4 rounded-full text-center font-medium hover:bg-brand-50 transition-colors">
+            了解外泌體
+          </a>
+        </div>
+        <div class="flex items-center gap-6 mt-10 text-sm text-brand-400">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-sage-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            零藥物添加
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-sage-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            7天有感
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-sage-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            台灣法規製程
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Exosome -->
+  <section id="exosome" class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-brand-400 tracking-[0.2em] text-sm mb-3 uppercase">What is Exosome</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">什麼是外泌體?</h2>
+        <div class="line-decoration-center"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="fade-in">
+          <div class="bg-brand-50 rounded-3xl p-8 md:p-10">
+            <div class="w-20 h-20 rounded-2xl gold-gradient flex items-center justify-center mb-6 float">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">細胞間的信使</h3>
+            <p class="text-brand-500 leading-relaxed mb-4">
+              外泌體 (Exosome) 是人體細胞自然分泌的奈米級囊泡,直徑僅30至150奈米。
+              它攜帶蛋白質、脂質、核酸等活性因子,是細胞之間傳遞修護訊號的關鍵信使。
+            </p>
+            <p class="text-brand-500 leading-relaxed">
+              當肌膚受損時,外泌體能精準傳遞再生指令,啟動膠原蛋白增生、
+              加速細胞更新,從根源修護肌膚屏障,而非僅停留在表層的暫時遮蓋。
+            </p>
+          </div>
+        </div>
+        <div class="fade-in">
+          <div class="space-y-6">
+            <div class="flex gap-5 items-start card-hover bg-cream rounded-2xl p-6">
+              <div class="w-12 h-12 rounded-xl bg-sage-100 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-sage-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">促進細胞再生</h4>
+                <p class="text-sm text-brand-400">傳遞生長因子,啟動膠原蛋白與彈性蛋白增生,加速肌膚自我修復</p>
+              </div>
+            </div>
+            <div class="flex gap-5 items-start card-hover bg-cream rounded-2xl p-6">
+              <div class="w-12 h-12 rounded-xl bg-sage-100 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-sage-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">修復肌膚屏障</h4>
+                <p class="text-sm text-brand-400">強化皮膚天然保護層,改善術後敏感、泛紅、脆弱等問題</p>
+              </div>
+            </div>
+            <div class="flex gap-5 items-start card-hover bg-cream rounded-2xl p-6">
+              <div class="w-12 h-12 rounded-xl bg-sage-100 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-sage-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">抗老亮白</h4>
+                <p class="text-sm text-brand-400">抑制黑色素生成,均勻膚色,由內而外綻放年輕光澤</p>
+              </div>
+            </div>
+            <div class="flex gap-5 items-start card-hover bg-cream rounded-2xl p-6">
+              <div class="w-12 h-12 rounded-xl bg-sage-100 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-sage-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">舒緩鎮定</h4>
+                <p class="text-sm text-brand-400">有效緩解雷射、換膚後的紅腫不適,縮短恢復期</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why GreenPlus -->
+  <section class="py-20 md:py-28 bg-brand-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-brand-400 tracking-[0.2em] text-sm mb-3 uppercase">Why GreenPlus</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">為什麼選擇加格霖?</h2>
+        <div class="line-decoration-center"></div>
+      </div>
+
+      <!-- Brand Story -->
+      <div class="max-w-3xl mx-auto mb-16 fade-in">
+        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm">
+          <p class="text-lg text-brand-500 leading-relaxed mb-6 font-light italic border-l-4 border-gold pl-6">
+            品牌執行長親身經歷問題皮膚的困擾,嘗試過無數產品和方法,
+            束手無策反而皮膚越來越糟。成立品牌的初衷:不找明星代言,
+            不把預算花在精美包裝上,專注產品本身,把每一位消費者當成自己一樣。
+          </p>
+          <p class="text-brand-400 leading-relaxed">
+            經過十年的錘煉,專業團隊成功研發出適合任何膚質使用的一系列修護保養品。
+            成分單純、簡單有效、CP值高,賦予肌膚全方位修護,恢復健康素顏美麗。
+          </p>
+        </div>
+      </div>
+
+      <!-- Promise Cards -->
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
+        <div class="bg-white rounded-2xl p-8 text-center card-hover fade-in">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-brand-100 flex items-center justify-center">
+            <svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">平衡</h3>
+          <p class="text-sm text-brand-400 leading-relaxed">
+            調理肌膚油水平衡,重建健康的皮脂膜,讓肌膚回歸穩定的最佳狀態
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 text-center card-hover fade-in">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-brand-100 flex items-center justify-center">
+            <svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">修護</h3>
+          <p class="text-sm text-brand-400 leading-relaxed">
+            外泌體結合專利修護成分,深層修復受損細胞,重建肌膚屏障與彈性
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 text-center card-hover fade-in">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-brand-100 flex items-center justify-center">
+            <svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">延緩</h3>
+          <p class="text-sm text-brand-400 leading-relaxed">
+            多胜肽抗老因子延緩肌膚老化時鐘,持續維持緊緻、彈潤、年輕態
+          </p>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto fade-in">
+        <div class="text-center">
+          <div class="text-3xl md:text-5xl font-display font-bold text-gold-gradient mb-2">亮白</div>
+          <p class="text-xs md:text-sm text-brand-400">透亮均勻膚色</p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-5xl font-display font-bold text-gold-gradient mb-2">潤透</div>
+          <p class="text-xs md:text-sm text-brand-400">深層保濕水潤</p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-5xl font-display font-bold text-gold-gradient mb-2">緊緻</div>
+          <p class="text-xs md:text-sm text-brand-400">彈性飽滿輪廓</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ingredients -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-brand-400 tracking-[0.2em] text-sm mb-3 uppercase">Premium Ingredients</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">頂級成分,安心修護</h2>
+        <div class="line-decoration-center"></div>
+        <p class="text-brand-400 mt-6 max-w-xl mx-auto">
+          嚴選珍貴原料,結合外泌體科技,每一滴都是對肌膚的溫柔承諾
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div class="flex gap-4 items-start bg-brand-50 rounded-2xl p-6 card-hover fade-in">
+          <div class="ingredient-icon">
+            <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">外泌體 Exosome</h4>
+            <p class="text-sm text-brand-400">奈米級細胞信使,精準傳遞修護指令,啟動肌膚自癒再生機制</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start bg-brand-50 rounded-2xl p-6 card-hover fade-in">
+          <div class="ingredient-icon">
+            <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">玻尿酸</h4>
+            <p class="text-sm text-brand-400">超強保濕因子,鎖住肌膚水分,打造水潤飽滿的健康膚質</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start bg-brand-50 rounded-2xl p-6 card-hover fade-in">
+          <div class="ingredient-icon">
+            <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">多胜肽</h4>
+            <p class="text-sm text-brand-400">肌膚抗老因子,促進膠原蛋白合成,緊緻肌膚延緩老化</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start bg-brand-50 rounded-2xl p-6 card-hover fade-in">
+          <div class="ingredient-icon">
+            <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">尿囊素</h4>
+            <p class="text-sm text-brand-400">補水鎖水雙效,加速角質代謝,溫和修護受損肌膚組織</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start bg-brand-50 rounded-2xl p-6 card-hover fade-in">
+          <div class="ingredient-icon">
+            <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">傳明酸</h4>
+            <p class="text-sm text-brand-400">舒緩修護成分,抑制發炎反應,淡化色斑恢復均勻膚色</p>
+          </div>
+        </div>
+        <div class="flex gap-4 items-start bg-brand-50 rounded-2xl p-6 card-hover fade-in">
+          <div class="ingredient-icon">
+            <svg class="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L12 4.37m-5.68 5.7h11.8M4.26 19.67A9.75 9.75 0 1019.74 4.33 9.75 9.75 0 004.26 19.67z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1">專利修護成分</h4>
+            <p class="text-sm text-brand-400">獨家研發配方,強化肌膚屏障功能,加速術後恢復</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Safety Badges -->
+      <div class="bg-sage-50 rounded-3xl p-8 md:p-10 fade-in">
+        <h3 class="text-center font-bold text-lg mb-8 text-sage-600">安全承諾,絕不妥協</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 text-center">
+          <div class="bg-white rounded-xl p-4">
+            <div class="text-2xl mb-2">
+              <svg class="w-8 h-8 mx-auto text-sage-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+            </div>
+            <p class="text-xs text-brand-500 font-medium">零藥物</p>
+          </div>
+          <div class="bg-white rounded-xl p-4">
+            <div class="text-2xl mb-2">
+              <svg class="w-8 h-8 mx-auto text-sage-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+            </div>
+            <p class="text-xs text-brand-500 font-medium">零強酸</p>
+          </div>
+          <div class="bg-white rounded-xl p-4">
+            <div class="text-2xl mb-2">
+              <svg class="w-8 h-8 mx-auto text-sage-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+            </div>
+            <p class="text-xs text-brand-500 font-medium">零酒精</p>
+          </div>
+          <div class="bg-white rounded-xl p-4">
+            <div class="text-2xl mb-2">
+              <svg class="w-8 h-8 mx-auto text-sage-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+            </div>
+            <p class="text-xs text-brand-500 font-medium">零荷爾蒙</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 col-span-2 sm:col-span-1">
+            <div class="text-2xl mb-2">
+              <svg class="w-8 h-8 mx-auto text-sage-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+            </div>
+            <p class="text-xs text-brand-500 font-medium">零動物實驗</p>
+          </div>
+        </div>
+        <p class="text-center text-xs text-brand-400 mt-6">
+          遵循台灣法規製程標準 / 投保產品責任險 / 通過多項安全性與功效性測試
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Flow -->
+  <section class="py-20 md:py-28 bg-brand-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-brand-400 tracking-[0.2em] text-sm mb-3 uppercase">Experience Flow</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">外泌體體驗流程</h2>
+        <div class="line-decoration-center"></div>
+      </div>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center fade-in">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-full gold-gradient flex items-center justify-center text-white text-xl font-bold">1</div>
+          <h4 class="font-bold mb-2">預約諮詢</h4>
+          <p class="text-sm text-brand-400">填寫表單,專業顧問為您量身安排適合的體驗方案</p>
+        </div>
+        <div class="text-center fade-in">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-full gold-gradient flex items-center justify-center text-white text-xl font-bold">2</div>
+          <h4 class="font-bold mb-2">膚質檢測</h4>
+          <p class="text-sm text-brand-400">專業儀器檢測膚況,深入了解肌膚問題與需求</p>
+        </div>
+        <div class="text-center fade-in">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-full gold-gradient flex items-center justify-center text-white text-xl font-bold">3</div>
+          <h4 class="font-bold mb-2">外泌體導入</h4>
+          <p class="text-sm text-brand-400">搭配專業手技與儀器,將外泌體精華深層導入肌底</p>
+        </div>
+        <div class="text-center fade-in">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-full gold-gradient flex items-center justify-center text-white text-xl font-bold">4</div>
+          <h4 class="font-bold mb-2">居家修護</h4>
+          <p class="text-sm text-brand-400">搭配加格霖居家保養品,延續修護效果,持續煥膚</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-brand-400 tracking-[0.2em] text-sm mb-3 uppercase">Testimonials</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">好評見證</h2>
+        <div class="line-decoration-center"></div>
+        <p class="text-brand-400 mt-6">享譽台灣、新加坡、馬來西亞等多國愛美人士的信賴</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-brand-50 rounded-2xl p-8 card-hover fade-in">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-brand-500 leading-relaxed mb-5 text-sm">
+            做完皮秒後用加格霖的修護精華,泛紅恢復超快!以前至少要紅一週,這次三天就退了。外泌體系列更是讓膚質整個提升,朋友都問我是不是偷偷去打了什麼。
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-200 flex items-center justify-center text-sm font-bold text-brand-600">L</div>
+            <div>
+              <p class="text-sm font-medium">Linda C.</p>
+              <p class="text-xs text-brand-400">台北 / 皮秒術後修護</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-brand-50 rounded-2xl p-8 card-hover fade-in">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-brand-500 leading-relaxed mb-5 text-sm">
+            敏感肌用過太多產品都過敏,加格霖是第一個完全不刺激的。外泌體體驗後隔天皮膚就變得很透亮,摸起來滑滑的,真的沒有誇張。成分單純又有效,回購到第五瓶了。
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-200 flex items-center justify-center text-sm font-bold text-brand-600">M</div>
+            <div>
+              <p class="text-sm font-medium">Mei W.</p>
+              <p class="text-xs text-brand-400">新加坡 / 敏感肌修護</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-brand-50 rounded-2xl p-8 card-hover fade-in">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-brand-500 leading-relaxed mb-5 text-sm">
+            CP值真的很高,比專櫃貴婦牌效果還好。老婆做完飛梭後我買給她用,恢復期縮短很多,現在全家都在用。不含酒精荷爾蒙那些有的沒的,用起來很安心。
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-200 flex items-center justify-center text-sm font-bold text-brand-600">K</div>
+            <div>
+              <p class="text-sm font-medium">Kevin H.</p>
+              <p class="text-xs text-brand-400">高雄 / 飛梭術後修護</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="booking" class="py-20 md:py-28 bg-brand-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Left: Info -->
+        <div class="fade-in">
+          <p class="text-brand-400 tracking-[0.2em] text-sm mb-3 uppercase">Book Now</p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">預約外泌體體驗</h2>
+          <div class="line-decoration"></div>
+          <p class="text-brand-500 leading-relaxed mt-6 mb-10">
+            填寫以下表單,專業顧問將在24小時內與您聯繫,
+            為您量身規劃最適合的外泌體肌膚修護方案。
+          </p>
+          <div class="space-y-6">
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm mb-1">24小時內回覆</h4>
+                <p class="text-sm text-brand-400">專人快速聯繫,不浪費您的等待時間</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm mb-1">免費膚質諮詢</h4>
+                <p class="text-sm text-brand-400">了解您的肌膚狀況,提供專業建議</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm mb-1">首次體驗優惠</h4>
+                <p class="text-sm text-brand-400">新客限定專屬優惠,體驗細胞級修護科技</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="fade-in">
+          <form id="bookingForm" class="bg-white rounded-3xl p-8 md:p-10 shadow-lg">
+            <h3 class="text-xl font-bold mb-6">填寫預約資訊</h3>
+            <div class="space-y-5">
+              <div>
+                <label class="block text-sm font-medium mb-2">姓名 *</label>
+                <input type="text" name="name" required placeholder="請輸入您的姓名"
+                       class="w-full px-4 py-3 rounded-xl border border-brand-200 text-sm transition-all">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">手機號碼 *</label>
+                <input type="tel" name="phone" required placeholder="0912-345-678"
+                       class="w-full px-4 py-3 rounded-xl border border-brand-200 text-sm transition-all">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">LINE ID</label>
+                <input type="text" name="line_id" placeholder="方便加您好友聯繫"
+                       class="w-full px-4 py-3 rounded-xl border border-brand-200 text-sm transition-all">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">想了解的項目 *</label>
+                <select name="interest" required
+                        class="w-full px-4 py-3 rounded-xl border border-brand-200 text-sm transition-all bg-white">
+                  <option value="">請選擇</option>
+                  <option value="exosome-facial">外泌體臉部修護體驗</option>
+                  <option value="post-treatment">醫美術後修護諮詢</option>
+                  <option value="anti-aging">抗老緊緻方案</option>
+                  <option value="sensitive">敏感肌修護方案</option>
+                  <option value="product">產品購買諮詢</option>
+                  <option value="other">其他</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">膚況描述</label>
+                <textarea name="skin_concern" rows="3" placeholder="簡述您目前的肌膚狀況或困擾,例如:最近做完皮秒,皮膚泛紅敏感..."
+                          class="w-full px-4 py-3 rounded-xl border border-brand-200 text-sm transition-all resize-none"></textarea>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">偏好聯繫時段</label>
+                <select name="contact_time"
+                        class="w-full px-4 py-3 rounded-xl border border-brand-200 text-sm transition-all bg-white">
+                  <option value="">不限</option>
+                  <option value="morning">上午 (10:00-12:00)</option>
+                  <option value="afternoon">下午 (14:00-17:00)</option>
+                  <option value="evening">晚上 (19:00-21:00)</option>
+                </select>
+              </div>
+              <button type="submit"
+                      class="w-full gold-gradient text-white py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity pulse-btn">
+                立即預約免費諮詢
+              </button>
+              <div class="relative flex items-center my-2">
+                <div class="flex-grow border-t border-brand-200"></div>
+                <span class="flex-shrink mx-4 text-xs text-brand-400">或</span>
+                <div class="flex-grow border-t border-brand-200"></div>
+              </div>
+              <a href="https://lin.ee/5Pk0PR4" target="_blank" rel="noopener"
+                 class="w-full flex items-center justify-center gap-2 bg-[#06C755] text-white py-4 rounded-xl font-bold text-lg hover:bg-[#05b04c] transition-colors">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                直接 LINE 諮詢
+              </a>
+              <p class="text-xs text-brand-400 text-center">
+                提交即表示您同意我們的隱私權政策,您的資料僅用於預約聯繫
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-brand-400 tracking-[0.2em] text-sm mb-3 uppercase">FAQ</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">常見問題</h2>
+        <div class="line-decoration-center"></div>
+      </div>
+      <div class="space-y-4 fade-in">
+        <details class="bg-brand-50 rounded-2xl group" open>
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-medium hover:text-gold transition-colors">
+            外泌體適合什麼樣的膚質?
+            <svg class="w-5 h-5 text-brand-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-brand-500 leading-relaxed">
+            外泌體是人體細胞自然分泌的物質,生物相容性極高,適合所有膚質使用,包括敏感肌、油性肌、乾性肌和混合肌。特別推薦給醫美術後需要修護、肌膚老化鬆弛、膚色暗沉不均的族群。
+          </div>
+        </details>
+        <details class="bg-brand-50 rounded-2xl group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-medium hover:text-gold transition-colors">
+            外泌體體驗多久可以看到效果?
+            <svg class="w-5 h-5 text-brand-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-brand-500 leading-relaxed">
+            搭配加格霖產品使用,多數使用者在7天內即可感受到膚質明顯改善,包括保濕度提升、膚色更均勻、觸感更細緻。持續使用效果更加顯著,建議搭配完整的居家修護方案。
+          </div>
+        </details>
+        <details class="bg-brand-50 rounded-2xl group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-medium hover:text-gold transition-colors">
+            加格霖產品安全嗎?有什麼認證?
+            <svg class="w-5 h-5 text-brand-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-brand-500 leading-relaxed">
+            加格霖所有產品遵循台灣法規製程標準,並投保產品責任險。保證不含任何藥物、強酸、酒精、基因改造成分、塑化劑、雌激素、荷爾蒙等有害物質,且無動物實驗。通過多項安全性與功效性測試。
+          </div>
+        </details>
+        <details class="bg-brand-50 rounded-2xl group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-medium hover:text-gold transition-colors">
+            醫美術後多久可以開始使用?
+            <svg class="w-5 h-5 text-brand-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-brand-500 leading-relaxed">
+            加格霖專為醫美術後量身打造,成分溫和不刺激,一般術後待傷口癒合即可開始使用。建議先諮詢您的醫美醫師,我們的顧問也會根據您的療程類型提供最適合的使用建議。
+          </div>
+        </details>
+        <details class="bg-brand-50 rounded-2xl group">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-medium hover:text-gold transition-colors">
+            可以寄送到海外嗎?
+            <svg class="w-5 h-5 text-brand-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-brand-500 leading-relaxed">
+            可以。加格霖已服務台灣、新加坡、馬來西亞等多個國家地區的愛美人士,提供跨國寄送服務。詳細運費與配送方式請於諮詢時詢問顧問。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-16 md:py-20 gold-gradient">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+        不需要過度妝扮,也能擁有閃亮肌膚
+      </h2>
+      <p class="text-white/80 mb-8">
+        加格霖十年修護專研,結合外泌體科技,讓素顏也自信
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#booking"
+           class="inline-block bg-white text-brand-700 px-10 py-4 rounded-full font-bold text-lg hover:bg-brand-50 transition-colors">
+          立即預約體驗
+        </a>
+        <a href="https://lin.ee/5Pk0PR4" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 bg-[#06C755] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#05b04c] transition-colors">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          LINE 諮詢
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blush-200 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- Logo -->
+      <div class="text-center mb-10">
+        <div class="flex items-center justify-center gap-3 mb-3">
+          <span class="font-logo text-3xl font-semibold text-gold tracking-wider" style="letter-spacing: 0.15em;">G<span class="text-2xl">P</span></span>
+          <span class="font-logo text-xl font-medium text-gold tracking-[0.3em]">GREEN PLUS</span>
+        </div>
+        <p class="text-sm text-brand-500">醫美術後皮膚修護量身打造的保養品 / 修護皮膚第一品牌</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10 mb-12">
+        <!-- Contact -->
+        <div>
+          <h4 class="text-gold font-bold mb-4 tracking-wide">聯繫我們</h4>
+          <div class="space-y-3 text-sm text-brand-600">
+            <a href="tel:07-3341665" class="flex items-center gap-3 hover:text-gold transition-colors">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+              客服電話 07-3341665
+            </a>
+            <a href="mailto:greenplus2657@gmail.com" class="flex items-center gap-3 hover:text-gold transition-colors">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              greenplus2657@gmail.com
+            </a>
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              高雄市苓雅區允文街115號
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              營業時間: 週一~週五 10:30~18:00
+            </div>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h4 class="text-gold font-bold mb-4 tracking-wide">社群媒體</h4>
+          <div class="space-y-3 text-sm text-brand-600">
+            <a href="https://lin.ee/5Pk0PR4" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-gold transition-colors">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+              LINE @115vpxtg
+            </a>
+            <a href="https://www.instagram.com/Greenplus88" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-gold transition-colors">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              Instagram @Greenplus88
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=加格霖Greenplus" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-gold transition-colors">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook 加格霖Greenplus
+            </a>
+            <a href="https://www.greenplus.com.tw" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-gold transition-colors">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+              www.greenplus.com.tw
+            </a>
+          </div>
+        </div>
+
+        <!-- Brand Info -->
+        <div>
+          <h4 class="text-gold font-bold mb-4 tracking-wide">品牌保障</h4>
+          <div class="space-y-3 text-sm text-brand-600">
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+              台灣法規製程標準
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+              投保產品責任險
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+              通過安全性與功效性測試
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+              享譽台灣、新加坡、馬來西亞
+            </div>
+            <p class="text-xs text-brand-400 pt-1">統一編號: 50925597</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-blush-300 pt-8 text-center text-xs text-brand-500">
+        <p>Copyright &copy; 2024 GREEN PLUS. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating LINE Button (mobile) -->
+  <a href="https://lin.ee/5Pk0PR4" target="_blank" rel="noopener"
+     class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#06C755] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform md:hidden"
+     aria-label="LINE 諮詢">
+    <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+  </a>
+
+  <!-- Form Submit + Scroll Animation -->
+  <script>
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ====== Google Sheets 串接設定 ======
+    // 部署 Apps Script 後,將網址貼在這裡
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzzsfNQv84pa3wpF55mVEDH84TV244a6n2tHVKiS9jIAGmhWIFJmTIjc7wT4W2UHipH8Q/exec';
+
+    // Form submission
+    document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      const form = this;
+
+      // 找到送出按鈕,顯示載入狀態
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = '提交中...';
+      submitBtn.classList.add('opacity-70');
+
+      try {
+        // 送出到 Google Apps Script
+        if (GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+          await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+        }
+
+        // 顯示成功畫面
+        form.innerHTML = `
+          <div class="text-center py-8">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-sage-100 flex items-center justify-center">
+              <svg class="w-10 h-10 text-sage-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">預約成功!</h3>
+            <p class="text-brand-500 mb-2">感謝您的預約,${data.name}!</p>
+            <p class="text-brand-400 text-sm mb-6">我們的專業顧問將在24小時內透過電話或LINE與您聯繫。</p>
+            <a href="https://lin.ee/5Pk0PR4" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 bg-[#06C755] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#05b04c] transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+              加入 LINE 好友搶先諮詢
+            </a>
+          </div>
+        `;
+      } catch (error) {
+        // 網路錯誤時仍顯示成功（no-cors 模式下無法讀取回應）
+        form.innerHTML = `
+          <div class="text-center py-8">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-sage-100 flex items-center justify-center">
+              <svg class="w-10 h-10 text-sage-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">預約成功!</h3>
+            <p class="text-brand-500 mb-2">感謝您的預約,${data.name}!</p>
+            <p class="text-brand-400 text-sm">我們的專業顧問將在24小時內透過電話或LINE與您聯繫。</p>
+          </div>
+        `;
+      }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
